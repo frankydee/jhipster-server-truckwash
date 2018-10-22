@@ -1,0 +1,73 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myVehicleLabel" data-translate="truckwashApp.vehicle.home.createOrEditLabel">Create or edit a Vehicle</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.vehicle.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.vehicle.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.vehicle.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="vm.vehicle.description"
+                    required/>
+            <div ng-show="editForm.description.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.description.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.vehicle.registrationNummer" for="field_registrationNummer">Registration Nummer</label>
+            <input type="text" class="form-control" name="registrationNummer" id="field_registrationNummer"
+                    ng-model="vm.vehicle.registrationNummer"
+                    required/>
+            <div ng-show="editForm.registrationNummer.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.registrationNummer.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.vehicle.type" for="field_type">Type</label>
+            <select class="form-control" name="type" ng-model="vm.vehicle.type" id="field_type">
+                <option value="TRUCK" data-translate="truckwashApp.VehicleType.TRUCK">TRUCK</option>
+                <option value="CAR" data-translate="truckwashApp.VehicleType.CAR">CAR</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.vehicle.defaultFlag" for="field_defaultFlag">Default Flag</label>
+                <input type="checkbox" name="defaultFlag" id="field_defaultFlag"
+                          ng-model="vm.vehicle.defaultFlag"/>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.vehicle.sortOrder" for="field_sortOrder">Sort Order</label>
+            <input type="number" class="form-control" name="sortOrder" id="field_sortOrder"
+                    ng-model="vm.vehicle.sortOrder"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.vehicle.active" for="field_active">Active</label>
+                <input type="checkbox" name="active" id="field_active"
+                          ng-model="vm.vehicle.active"/>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span data-translate="truckwashApp.company.detail.title">Company</span> {{vm.company.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="truckwashApp.company.name">Name</span></dt>
+        <dd>
+            <span>{{vm.company.name}}</span>
+        </dd>
+        <dt><span data-translate="truckwashApp.company.registrationNumber">Registration Number</span></dt>
+        <dd>
+            <span>{{vm.company.registrationNumber}}</span>
+        </dd>
+        <dt><span data-translate="truckwashApp.company.externalReferenceId">External Reference Id</span></dt>
+        <dd>
+            <span>{{vm.company.externalReferenceId}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="company-detail.edit({id:vm.company.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

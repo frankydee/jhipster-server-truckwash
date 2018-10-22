@@ -1,0 +1,98 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myProductOrServiceLabel" data-translate="truckwashApp.productOrService.home.createOrEditLabel">Create or edit a Product Or Service</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.productOrService.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.productOrService.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.productOrService.shortDescription" for="field_shortDescription">Short Description</label>
+            <input type="text" class="form-control" name="shortDescription" id="field_shortDescription"
+                    ng-model="vm.productOrService.shortDescription"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.productOrService.longDescription" for="field_longDescription">Long Description</label>
+            <input type="text" class="form-control" name="longDescription" id="field_longDescription"
+                    ng-model="vm.productOrService.longDescription"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.productOrService.unitOfMeashre" for="field_unitOfMeashre">Unit Of Meashre</label>
+            <select class="form-control" name="unitOfMeashre" ng-model="vm.productOrService.unitOfMeashre" id="field_unitOfMeashre">
+                <option value="NUMBER" data-translate="truckwashApp.UnitOfMeasure.NUMBER">NUMBER</option>
+                <option value="LITRE" data-translate="truckwashApp.UnitOfMeasure.LITRE">LITRE</option>
+                <option value="MILLILITRE" data-translate="truckwashApp.UnitOfMeasure.MILLILITRE">MILLILITRE</option>
+                <option value="HOUR" data-translate="truckwashApp.UnitOfMeasure.HOUR">HOUR</option>
+                <option value="MINUTE" data-translate="truckwashApp.UnitOfMeasure.MINUTE">MINUTE</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.productOrService.pricePerUnit" for="field_pricePerUnit">Price Per Unit</label>
+            <input type="number" class="form-control" name="pricePerUnit" id="field_pricePerUnit"
+                    ng-model="vm.productOrService.pricePerUnit"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.productOrService.type" for="field_type">Type</label>
+            <select class="form-control" name="type" ng-model="vm.productOrService.type" id="field_type">
+                <option value="PRODUCT" data-translate="truckwashApp.ProductOrServiceType.PRODUCT">PRODUCT</option>
+                <option value="SERVICE" data-translate="truckwashApp.ProductOrServiceType.SERVICE">SERVICE</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.productOrService.maxDuration" for="field_maxDuration">Max Duration</label>
+            <input type="number" class="form-control" name="maxDuration" id="field_maxDuration"
+                    ng-model="vm.productOrService.maxDuration"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.productOrService.quantityInStock" for="field_quantityInStock">Quantity In Stock</label>
+            <input type="number" class="form-control" name="quantityInStock" id="field_quantityInStock"
+                    ng-model="vm.productOrService.quantityInStock"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.productOrService.quantityMetering" for="field_quantityMetering">Quantity Metering</label>
+            <select class="form-control" name="quantityMetering" ng-model="vm.productOrService.quantityMetering" id="field_quantityMetering">
+                <option value="INFINITE_QTY" data-translate="truckwashApp.ProductQuantityMetering.INFINITE_QTY">INFINITE_QTY</option>
+                <option value="QTY_NOT_METERED" data-translate="truckwashApp.ProductQuantityMetering.QTY_NOT_METERED">QTY_NOT_METERED</option>
+                <option value="MANUAL" data-translate="truckwashApp.ProductQuantityMetering.MANUAL">MANUAL</option>
+                <option value="AUTO" data-translate="truckwashApp.ProductQuantityMetering.AUTO">AUTO</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.productOrService.autoMeteringInterval" for="field_autoMeteringInterval">Auto Metering Interval</label>
+            <input type="number" class="form-control" name="autoMeteringInterval" id="field_autoMeteringInterval"
+                    ng-model="vm.productOrService.autoMeteringInterval"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.productOrService.lowLevelAlert" for="field_lowLevelAlert">Low Level Alert</label>
+                <input type="checkbox" name="lowLevelAlert" id="field_lowLevelAlert"
+                          ng-model="vm.productOrService.lowLevelAlert"/>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.productOrService.active" for="field_active">Active</label>
+                <input type="checkbox" name="active" id="field_active"
+                          ng-model="vm.productOrService.active"/>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

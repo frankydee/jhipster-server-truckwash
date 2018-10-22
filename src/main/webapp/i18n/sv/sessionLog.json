@@ -1,0 +1,23 @@
+{
+    "truckwashApp": {
+        "sessionLog" : {
+            "home": {
+                "title": "Session Logs",
+                "createLabel": "Skapa en ny Session Log",
+                "createOrEditLabel": "Skapa eller ändra en Session Log"
+            },
+            "created": "En ny Session Log är skapad med id {{ param }}",
+            "updated": "En Session Log är uppdaterad med id  {{ param }}",
+            "deleted": "En Session Log är borttagen med id  {{ param }}",
+            "delete": {
+                "question": "Är du säker på att du vill ta bort Session Log {{ id }}?"
+            },
+            "detail": {
+                "title": "Session Log"
+            },
+            "logType": "Log Type",
+            "createDate": "Create Date",
+            "filePath": "File Path"
+        }
+    }
+}

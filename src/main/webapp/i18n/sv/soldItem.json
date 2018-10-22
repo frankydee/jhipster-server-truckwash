@@ -1,0 +1,23 @@
+{
+    "truckwashApp": {
+        "soldItem" : {
+            "home": {
+                "title": "Sold Items",
+                "createLabel": "Skapa en ny Sold Item",
+                "createOrEditLabel": "Skapa eller ändra en Sold Item"
+            },
+            "created": "En ny Sold Item är skapad med id {{ param }}",
+            "updated": "En Sold Item är uppdaterad med id  {{ param }}",
+            "deleted": "En Sold Item är borttagen med id  {{ param }}",
+            "delete": {
+                "question": "Är du säker på att du vill ta bort Sold Item {{ id }}?"
+            },
+            "detail": {
+                "title": "Sold Item"
+            },
+            "totaliserStart": "Totaliser Start",
+            "totaliserEnd": "Totaliser End",
+            "quantity": "Quantity"
+        }
+    }
+}

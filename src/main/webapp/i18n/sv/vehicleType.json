@@ -1,0 +1,9 @@
+{
+    "truckwashApp": {
+        "VehicleType" : {
+            "null": "",
+            "TRUCK": "TRUCK",
+            "CAR": "CAR"
+        }
+    }
+}

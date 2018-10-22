@@ -1,0 +1,67 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myCustomerLabel" data-translate="truckwashApp.customer.home.createOrEditLabel">Create or edit a Customer</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.customer.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.customer.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.customer.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="vm.customer.name"
+                    required/>
+            <div ng-show="editForm.name.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.name.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.customer.preferredLanguage" for="field_preferredLanguage">Preferred Language</label>
+            <select class="form-control" name="preferredLanguage" ng-model="vm.customer.preferredLanguage" id="field_preferredLanguage" required>
+                <option value="EN" data-translate="truckwashApp.Language.EN">EN</option>
+                <option value="SV" data-translate="truckwashApp.Language.SV">SV</option>
+            </select>
+            <div ng-show="editForm.preferredLanguage.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.preferredLanguage.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.customer.active" for="field_active">Active</label>
+            <input type="text" class="form-control" name="active" id="field_active"
+                    ng-model="vm.customer.active"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.customer.loggingLevel" for="field_loggingLevel">Logging Level</label>
+            <select class="form-control" name="loggingLevel" ng-model="vm.customer.loggingLevel" id="field_loggingLevel">
+                <option value="ERROR" data-translate="truckwashApp.LoggingLevel.ERROR">ERROR</option>
+                <option value="WARNING" data-translate="truckwashApp.LoggingLevel.WARNING">WARNING</option>
+                <option value="INFO" data-translate="truckwashApp.LoggingLevel.INFO">INFO</option>
+                <option value="DEBUG" data-translate="truckwashApp.LoggingLevel.DEBUG">DEBUG</option>
+                <option value="TRACE" data-translate="truckwashApp.LoggingLevel.TRACE">TRACE</option>
+            </select>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

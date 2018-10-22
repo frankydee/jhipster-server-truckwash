@@ -1,0 +1,76 @@
+<div>
+    <h2 data-translate="truckwashApp.productOrService.home.title">Product Or Services</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="product-or-service.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="truckwashApp.productOrService.home.createLabel">
+                        Create new Product Or Service
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="truckwashApp.productOrService.shortDescription">Short Description</span></th>
+                    <th><span data-translate="truckwashApp.productOrService.longDescription">Long Description</span></th>
+                    <th><span data-translate="truckwashApp.productOrService.unitOfMeashre">Unit Of Meashre</span></th>
+                    <th><span data-translate="truckwashApp.productOrService.pricePerUnit">Price Per Unit</span></th>
+                    <th><span data-translate="truckwashApp.productOrService.type">Type</span></th>
+                    <th><span data-translate="truckwashApp.productOrService.maxDuration">Max Duration</span></th>
+                    <th><span data-translate="truckwashApp.productOrService.quantityInStock">Quantity In Stock</span></th>
+                    <th><span data-translate="truckwashApp.productOrService.quantityMetering">Quantity Metering</span></th>
+                    <th><span data-translate="truckwashApp.productOrService.autoMeteringInterval">Auto Metering Interval</span></th>
+                    <th><span data-translate="truckwashApp.productOrService.lowLevelAlert">Low Level Alert</span></th>
+                    <th><span data-translate="truckwashApp.productOrService.active">Active</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="productOrService in vm.productOrServices track by productOrService.id">
+                    <td><a ui-sref="product-or-service-detail({id:productOrService.id})">{{productOrService.id}}</a></td>
+                    <td>{{productOrService.shortDescription}}</td>
+                    <td>{{productOrService.longDescription}}</td>
+                    <td data-translate="{{'truckwashApp.UnitOfMeasure.' + productOrService.unitOfMeashre}}">{{productOrService.unitOfMeashre}}</td>
+                    <td>{{productOrService.pricePerUnit}}</td>
+                    <td data-translate="{{'truckwashApp.ProductOrServiceType.' + productOrService.type}}">{{productOrService.type}}</td>
+                    <td>{{productOrService.maxDuration}}</td>
+                    <td>{{productOrService.quantityInStock}}</td>
+                    <td data-translate="{{'truckwashApp.ProductQuantityMetering.' + productOrService.quantityMetering}}">{{productOrService.quantityMetering}}</td>
+                    <td>{{productOrService.autoMeteringInterval}}</td>
+                    <td>{{productOrService.lowLevelAlert}}</td>
+                    <td>{{productOrService.active}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="product-or-service-detail({id:productOrService.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="product-or-service.edit({id:productOrService.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="product-or-service.delete({id:productOrService.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

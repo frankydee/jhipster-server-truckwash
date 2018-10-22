@@ -1,0 +1,24 @@
+{
+    "truckwashApp": {
+        "inventory" : {
+            "home": {
+                "title": "Inventories",
+                "createLabel": "Skapa en ny Inventory",
+                "createOrEditLabel": "Skapa eller ändra en Inventory"
+            },
+            "created": "En ny Inventory är skapad med id {{ param }}",
+            "updated": "En Inventory är uppdaterad med id  {{ param }}",
+            "deleted": "En Inventory är borttagen med id  {{ param }}",
+            "delete": {
+                "question": "Är du säker på att du vill ta bort Inventory {{ id }}?"
+            },
+            "detail": {
+                "title": "Inventory"
+            },
+            "readingTime": "Reading Time",
+            "senrorReading": "Senror Reading",
+            "quantity": "Quantity",
+            "entryType": "Entry Type"
+        }
+    }
+}

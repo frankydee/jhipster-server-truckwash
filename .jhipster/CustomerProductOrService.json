@@ -1,0 +1,20 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "percentDiscount",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "overridingPricePerUnit",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20181021095759",
+    "entityTableName": "customer_product_or_service",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

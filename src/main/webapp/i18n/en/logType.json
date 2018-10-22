@@ -1,0 +1,9 @@
+{
+    "truckwashApp": {
+        "LogType" : {
+            "null": "",
+            "DB": "DB",
+            "FILE": "FILE"
+        }
+    }
+}

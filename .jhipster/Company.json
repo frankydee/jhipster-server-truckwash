@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "name",
+            "javadoc": "The name of the company",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "registrationNumber",
+            "javadoc": "The company registration number",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "externalReferenceId",
+            "javadoc": "External unique identifier for that company\nin the invoicing system",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20181021095755",
+    "javadoc": "A company.\n<p>\nCurrently, only companies can buy products\nand services from Tvatthallen (because only companies\ncan be invoiced),every user/customer has to belong to a\ncompany.\n</p>",
+    "entityTableName": "company",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

@@ -1,0 +1,55 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myInventoryLabel" data-translate="truckwashApp.inventory.home.createOrEditLabel">Create or edit a Inventory</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.inventory.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.inventory.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.inventory.readingTime" for="field_readingTime">Reading Time</label>
+                <div class="input-group">
+                    <input id="field_readingTime" type="text" class="form-control" name="readingTime" uib-datepicker-popup="{{dateformat}}" ng-model="vm.inventory.readingTime" is-open="vm.datePickerOpenStatus.readingTime"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('readingTime')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.inventory.senrorReading" for="field_senrorReading">Senror Reading</label>
+            <input type="number" class="form-control" name="senrorReading" id="field_senrorReading"
+                    ng-model="vm.inventory.senrorReading"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.inventory.quantity" for="field_quantity">Quantity</label>
+            <input type="number" class="form-control" name="quantity" id="field_quantity"
+                    ng-model="vm.inventory.quantity"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.inventory.entryType" for="field_entryType">Entry Type</label>
+            <select class="form-control" name="entryType" ng-model="vm.inventory.entryType" id="field_entryType">
+                <option value="MANUAL" data-translate="truckwashApp.ProductInventoryEntry.MANUAL">MANUAL</option>
+                <option value="AUTO" data-translate="truckwashApp.ProductInventoryEntry.AUTO">AUTO</option>
+            </select>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

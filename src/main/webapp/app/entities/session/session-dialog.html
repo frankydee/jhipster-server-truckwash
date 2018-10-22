@@ -1,0 +1,72 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="mySessionLabel" data-translate="truckwashApp.session.home.createOrEditLabel">Create or edit a Session</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.session.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.session.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.session.startTime" for="field_startTime">Start Time</label>
+                <div class="input-group">
+                    <input id="field_startTime" type="text" class="form-control" name="startTime" uib-datepicker-popup="{{dateformat}}" ng-model="vm.session.startTime" is-open="vm.datePickerOpenStatus.startTime"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('startTime')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.session.endTime" for="field_endTime">End Time</label>
+                <div class="input-group">
+                    <input id="field_endTime" type="text" class="form-control" name="endTime" uib-datepicker-popup="{{dateformat}}" ng-model="vm.session.endTime" is-open="vm.datePickerOpenStatus.endTime"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('endTime')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.session.endingCode" for="field_endingCode">Ending Code</label>
+            <select class="form-control" name="endingCode" ng-model="vm.session.endingCode" id="field_endingCode">
+                <option value="SYSTEM_TIMEOUT" data-translate="truckwashApp.SessionEndingCode.SYSTEM_TIMEOUT">SYSTEM_TIMEOUT</option>
+                <option value="SERVICE_TIME_LIMIT" data-translate="truckwashApp.SessionEndingCode.SERVICE_TIME_LIMIT">SERVICE_TIME_LIMIT</option>
+                <option value="USER_TRIGGERED" data-translate="truckwashApp.SessionEndingCode.USER_TRIGGERED">USER_TRIGGERED</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.session.status" for="field_status">Status</label>
+            <select class="form-control" name="status" ng-model="vm.session.status" id="field_status">
+                <option value="IN_PROGRESS" data-translate="truckwashApp.SessionStatus.IN_PROGRESS">IN_PROGRESS</option>
+                <option value="COMPLETED" data-translate="truckwashApp.SessionStatus.COMPLETED">COMPLETED</option>
+                <option value="ERRORED" data-translate="truckwashApp.SessionStatus.ERRORED">ERRORED</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="truckwashApp.session.loggingLevel" for="field_loggingLevel">Logging Level</label>
+            <select class="form-control" name="loggingLevel" ng-model="vm.session.loggingLevel" id="field_loggingLevel">
+                <option value="ERROR" data-translate="truckwashApp.LoggingLevel.ERROR">ERROR</option>
+                <option value="WARNING" data-translate="truckwashApp.LoggingLevel.WARNING">WARNING</option>
+                <option value="INFO" data-translate="truckwashApp.LoggingLevel.INFO">INFO</option>
+                <option value="DEBUG" data-translate="truckwashApp.LoggingLevel.DEBUG">DEBUG</option>
+                <option value="TRACE" data-translate="truckwashApp.LoggingLevel.TRACE">TRACE</option>
+            </select>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

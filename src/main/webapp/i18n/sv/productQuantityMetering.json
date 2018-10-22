@@ -1,0 +1,11 @@
+{
+    "truckwashApp": {
+        "ProductQuantityMetering" : {
+            "null": "",
+            "INFINITE_QTY": "INFINITE_QTY",
+            "QTY_NOT_METERED": "QTY_NOT_METERED",
+            "MANUAL": "MANUAL",
+            "AUTO": "AUTO"
+        }
+    }
+}

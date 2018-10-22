@@ -1,0 +1,10 @@
+{
+    "truckwashApp": {
+        "SessionStatus" : {
+            "null": "",
+            "IN_PROGRESS": "IN_PROGRESS",
+            "COMPLETED": "COMPLETED",
+            "ERRORED": "ERRORED"
+        }
+    }
+}

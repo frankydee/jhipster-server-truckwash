@@ -1,0 +1,60 @@
+<div>
+    <h2 data-translate="truckwashApp.sessionLog.home.title">Session Logs</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="session-log.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="truckwashApp.sessionLog.home.createLabel">
+                        Create new Session Log
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="truckwashApp.sessionLog.logType">Log Type</span></th>
+                    <th><span data-translate="truckwashApp.sessionLog.createDate">Create Date</span></th>
+                    <th><span data-translate="truckwashApp.sessionLog.filePath">File Path</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="sessionLog in vm.sessionLogs track by sessionLog.id">
+                    <td><a ui-sref="session-log-detail({id:sessionLog.id})">{{sessionLog.id}}</a></td>
+                    <td data-translate="{{'truckwashApp.LogType.' + sessionLog.logType}}">{{sessionLog.logType}}</td>
+                        <td>{{sessionLog.createDate | date:'mediumDate'}}</td>
+                    <td>{{sessionLog.filePath}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="session-log-detail({id:sessionLog.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="session-log.edit({id:sessionLog.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="session-log.delete({id:sessionLog.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

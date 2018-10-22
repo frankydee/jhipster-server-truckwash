@@ -1,0 +1,35 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "startTime",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "endTime",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "endingCode",
+            "fieldType": "SessionEndingCode",
+            "fieldValues": "SYSTEM_TIMEOUT,SERVICE_TIME_LIMIT,USER_TRIGGERED"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "SessionStatus",
+            "fieldValues": "IN_PROGRESS,COMPLETED,ERRORED"
+        },
+        {
+            "fieldName": "loggingLevel",
+            "fieldType": "LoggingLevel",
+            "fieldValues": "ERROR,WARNING,INFO,DEBUG,TRACE"
+        }
+    ],
+    "changelogDate": "20181021095801",
+    "entityTableName": "session",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

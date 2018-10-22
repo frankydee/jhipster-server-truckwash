@@ -1,0 +1,12 @@
+{
+    "truckwashApp": {
+        "UnitOfMeasure" : {
+            "null": "",
+            "NUMBER": "NUMBER",
+            "LITRE": "LITRE",
+            "MILLILITRE": "MILLILITRE",
+            "HOUR": "HOUR",
+            "MINUTE": "MINUTE"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "truckwashApp": {
+        "productOrService" : {
+            "home": {
+                "title": "Product Or Services",
+                "createLabel": "Create a new Product Or Service",
+                "createOrEditLabel": "Create or edit a Product Or Service"
+            },
+            "created": "A new Product Or Service is created with identifier {{ param }}",
+            "updated": "A Product Or Service is updated with identifier {{ param }}",
+            "deleted": "A Product Or Service is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Product Or Service {{ id }}?"
+            },
+            "detail": {
+                "title": "Product Or Service"
+            },
+            "shortDescription": "Short Description",
+            "longDescription": "Long Description",
+            "unitOfMeashre": "Unit Of Meashre",
+            "pricePerUnit": "Price Per Unit",
+            "type": "Type",
+            "maxDuration": "Max Duration",
+            "quantityInStock": "Quantity In Stock",
+            "quantityMetering": "Quantity Metering",
+            "autoMeteringInterval": "Auto Metering Interval",
+            "lowLevelAlert": "Low Level Alert",
+            "active": "Active"
+        }
+    }
+}

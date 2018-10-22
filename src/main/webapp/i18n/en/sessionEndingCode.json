@@ -1,0 +1,10 @@
+{
+    "truckwashApp": {
+        "SessionEndingCode" : {
+            "null": "",
+            "SYSTEM_TIMEOUT": "SYSTEM_TIMEOUT",
+            "SERVICE_TIME_LIMIT": "SERVICE_TIME_LIMIT",
+            "USER_TRIGGERED": "USER_TRIGGERED"
+        }
+    }
+}

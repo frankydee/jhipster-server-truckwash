@@ -1,0 +1,25 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "logType",
+            "fieldType": "LogType",
+            "fieldValues": "DB,FILE"
+        },
+        {
+            "fieldName": "createDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "filePath",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20181021095802",
+    "entityTableName": "session_log",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

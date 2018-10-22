@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span data-translate="truckwashApp.inventory.detail.title">Inventory</span> {{vm.inventory.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="truckwashApp.inventory.readingTime">Reading Time</span></dt>
+        <dd>
+            <span>{{vm.inventory.readingTime | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="truckwashApp.inventory.senrorReading">Senror Reading</span></dt>
+        <dd>
+            <span>{{vm.inventory.senrorReading}}</span>
+        </dd>
+        <dt><span data-translate="truckwashApp.inventory.quantity">Quantity</span></dt>
+        <dd>
+            <span>{{vm.inventory.quantity}}</span>
+        </dd>
+        <dt><span data-translate="truckwashApp.inventory.entryType">Entry Type</span></dt>
+        <dd>
+            <span data-translate="{{'truckwashApp.ProductInventoryEntry.' + vm.inventory.entryType}}">{{vm.inventory.entryType}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="inventory-detail.edit({id:vm.inventory.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

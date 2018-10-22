@@ -1,0 +1,9 @@
+{
+    "truckwashApp": {
+        "ProductInventoryEntry" : {
+            "null": "",
+            "MANUAL": "MANUAL",
+            "AUTO": "AUTO"
+        }
+    }
+}

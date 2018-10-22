@@ -1,0 +1,25 @@
+{
+    "truckwashApp": {
+        "session" : {
+            "home": {
+                "title": "Sessions",
+                "createLabel": "Skapa en ny Session",
+                "createOrEditLabel": "Skapa eller ändra en Session"
+            },
+            "created": "En ny Session är skapad med id {{ param }}",
+            "updated": "En Session är uppdaterad med id  {{ param }}",
+            "deleted": "En Session är borttagen med id  {{ param }}",
+            "delete": {
+                "question": "Är du säker på att du vill ta bort Session {{ id }}?"
+            },
+            "detail": {
+                "title": "Session"
+            },
+            "startTime": "Start Time",
+            "endTime": "End Time",
+            "endingCode": "Ending Code",
+            "status": "Status",
+            "loggingLevel": "Logging Level"
+        }
+    }
+}

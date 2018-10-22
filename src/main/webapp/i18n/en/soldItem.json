@@ -1,0 +1,23 @@
+{
+    "truckwashApp": {
+        "soldItem" : {
+            "home": {
+                "title": "Sold Items",
+                "createLabel": "Create a new Sold Item",
+                "createOrEditLabel": "Create or edit a Sold Item"
+            },
+            "created": "A new Sold Item is created with identifier {{ param }}",
+            "updated": "A Sold Item is updated with identifier {{ param }}",
+            "deleted": "A Sold Item is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Sold Item {{ id }}?"
+            },
+            "detail": {
+                "title": "Sold Item"
+            },
+            "totaliserStart": "Totaliser Start",
+            "totaliserEnd": "Totaliser End",
+            "quantity": "Quantity"
+        }
+    }
+}

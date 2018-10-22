@@ -1,0 +1,13 @@
+/* TODO
+ *
+ * 1. Create entity for relationship between Customer and products services (including overriding sales price or discount)
+ * 		- This should be also configuration at company level (or only company and not user?? 
+ *
+ * 2. Consider whether companies and customer should be stored in a single entiry (e.g. party) since the above would be easier 
+ *
+ * 3. Create a sensor entity which is linked to products and services.  This would include complex raw config data (only for me, not the users or system admin
+ *   would be only available to the role "hardware admin" or something like that...
+ */ 
+
+//TODO: Add comments to relationships  (check the JDL studio example for samples). each side of the relationship
+

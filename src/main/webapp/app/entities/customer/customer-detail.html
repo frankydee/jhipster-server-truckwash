@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span data-translate="truckwashApp.customer.detail.title">Customer</span> {{vm.customer.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="truckwashApp.customer.name">Name</span></dt>
+        <dd>
+            <span>{{vm.customer.name}}</span>
+        </dd>
+        <dt><span data-translate="truckwashApp.customer.preferredLanguage">Preferred Language</span></dt>
+        <dd>
+            <span data-translate="{{'truckwashApp.Language.' + vm.customer.preferredLanguage}}">{{vm.customer.preferredLanguage}}</span>
+        </dd>
+        <dt><span data-translate="truckwashApp.customer.active">Active</span></dt>
+        <dd>
+            <span>{{vm.customer.active}}</span>
+        </dd>
+        <dt><span data-translate="truckwashApp.customer.loggingLevel">Logging Level</span></dt>
+        <dd>
+            <span data-translate="{{'truckwashApp.LoggingLevel.' + vm.customer.loggingLevel}}">{{vm.customer.loggingLevel}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="customer-detail.edit({id:vm.customer.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

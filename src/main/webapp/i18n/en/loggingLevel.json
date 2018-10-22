@@ -1,0 +1,12 @@
+{
+    "truckwashApp": {
+        "LoggingLevel" : {
+            "null": "",
+            "ERROR": "ERROR",
+            "WARNING": "WARNING",
+            "INFO": "INFO",
+            "DEBUG": "DEBUG",
+            "TRACE": "TRACE"
+        }
+    }
+}

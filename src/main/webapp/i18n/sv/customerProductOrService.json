@@ -1,0 +1,22 @@
+{
+    "truckwashApp": {
+        "customerProductOrService" : {
+            "home": {
+                "title": "Customer Product Or Services",
+                "createLabel": "Skapa en ny Customer Product Or Service",
+                "createOrEditLabel": "Skapa eller ändra en Customer Product Or Service"
+            },
+            "created": "En ny Customer Product Or Service är skapad med id {{ param }}",
+            "updated": "En Customer Product Or Service är uppdaterad med id  {{ param }}",
+            "deleted": "En Customer Product Or Service är borttagen med id  {{ param }}",
+            "delete": {
+                "question": "Är du säker på att du vill ta bort Customer Product Or Service {{ id }}?"
+            },
+            "detail": {
+                "title": "Customer Product Or Service"
+            },
+            "percentDiscount": "Percent Discount",
+            "overridingPricePerUnit": "Overriding Price Per Unit"
+        }
+    }
+}

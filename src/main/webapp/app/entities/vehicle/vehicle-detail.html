@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span data-translate="truckwashApp.vehicle.detail.title">Vehicle</span> {{vm.vehicle.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="truckwashApp.vehicle.description">Description</span></dt>
+        <dd>
+            <span>{{vm.vehicle.description}}</span>
+        </dd>
+        <dt><span data-translate="truckwashApp.vehicle.registrationNummer">Registration Nummer</span></dt>
+        <dd>
+            <span>{{vm.vehicle.registrationNummer}}</span>
+        </dd>
+        <dt><span data-translate="truckwashApp.vehicle.type">Type</span></dt>
+        <dd>
+            <span data-translate="{{'truckwashApp.VehicleType.' + vm.vehicle.type}}">{{vm.vehicle.type}}</span>
+        </dd>
+        <dt><span data-translate="truckwashApp.vehicle.defaultFlag">Default Flag</span></dt>
+        <dd>
+            <span>{{vm.vehicle.defaultFlag}}</span>
+        </dd>
+        <dt><span data-translate="truckwashApp.vehicle.sortOrder">Sort Order</span></dt>
+        <dd>
+            <span>{{vm.vehicle.sortOrder}}</span>
+        </dd>
+        <dt><span data-translate="truckwashApp.vehicle.active">Active</span></dt>
+        <dd>
+            <span>{{vm.vehicle.active}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="vehicle-detail.edit({id:vm.vehicle.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

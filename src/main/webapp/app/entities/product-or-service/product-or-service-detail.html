@@ -1,0 +1,63 @@
+
+<div>
+    <h2><span data-translate="truckwashApp.productOrService.detail.title">Product Or Service</span> {{vm.productOrService.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="truckwashApp.productOrService.shortDescription">Short Description</span></dt>
+        <dd>
+            <span>{{vm.productOrService.shortDescription}}</span>
+        </dd>
+        <dt><span data-translate="truckwashApp.productOrService.longDescription">Long Description</span></dt>
+        <dd>
+            <span>{{vm.productOrService.longDescription}}</span>
+        </dd>
+        <dt><span data-translate="truckwashApp.productOrService.unitOfMeashre">Unit Of Meashre</span></dt>
+        <dd>
+            <span data-translate="{{'truckwashApp.UnitOfMeasure.' + vm.productOrService.unitOfMeashre}}">{{vm.productOrService.unitOfMeashre}}</span>
+        </dd>
+        <dt><span data-translate="truckwashApp.productOrService.pricePerUnit">Price Per Unit</span></dt>
+        <dd>
+            <span>{{vm.productOrService.pricePerUnit}}</span>
+        </dd>
+        <dt><span data-translate="truckwashApp.productOrService.type">Type</span></dt>
+        <dd>
+            <span data-translate="{{'truckwashApp.ProductOrServiceType.' + vm.productOrService.type}}">{{vm.productOrService.type}}</span>
+        </dd>
+        <dt><span data-translate="truckwashApp.productOrService.maxDuration">Max Duration</span></dt>
+        <dd>
+            <span>{{vm.productOrService.maxDuration}}</span>
+        </dd>
+        <dt><span data-translate="truckwashApp.productOrService.quantityInStock">Quantity In Stock</span></dt>
+        <dd>
+            <span>{{vm.productOrService.quantityInStock}}</span>
+        </dd>
+        <dt><span data-translate="truckwashApp.productOrService.quantityMetering">Quantity Metering</span></dt>
+        <dd>
+            <span data-translate="{{'truckwashApp.ProductQuantityMetering.' + vm.productOrService.quantityMetering}}">{{vm.productOrService.quantityMetering}}</span>
+        </dd>
+        <dt><span data-translate="truckwashApp.productOrService.autoMeteringInterval">Auto Metering Interval</span></dt>
+        <dd>
+            <span>{{vm.productOrService.autoMeteringInterval}}</span>
+        </dd>
+        <dt><span data-translate="truckwashApp.productOrService.lowLevelAlert">Low Level Alert</span></dt>
+        <dd>
+            <span>{{vm.productOrService.lowLevelAlert}}</span>
+        </dd>
+        <dt><span data-translate="truckwashApp.productOrService.active">Active</span></dt>
+        <dd>
+            <span>{{vm.productOrService.active}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="product-or-service-detail.edit({id:vm.productOrService.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

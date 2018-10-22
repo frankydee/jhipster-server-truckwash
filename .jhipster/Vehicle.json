@@ -1,0 +1,49 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "description",
+            "javadoc": "A short description identifying the vehicle\ne.g. \"Lastbil 6\" or \"White Audi\"",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "registrationNummer",
+            "javadoc": "Vehicle registration number (a.k.a. number plate)",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "type",
+            "javadoc": "Vehicle Type: A car or a Van",
+            "fieldType": "VehicleType",
+            "fieldValues": "TRUCK,CAR"
+        },
+        {
+            "fieldName": "defaultFlag",
+            "javadoc": "Whether it is the default vehicle for the user",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "sortOrder",
+            "javadoc": "Sort order with which it appears on the screen",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "active",
+            "javadoc": "Active flag:\nIf the vehicle is active, it will appear in the\nUI to be selected. Otherwise, it will appear only\nagainst historical data (like sessions)",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20181021095757",
+    "entityTableName": "vehicle",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

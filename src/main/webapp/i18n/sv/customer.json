@@ -1,0 +1,24 @@
+{
+    "truckwashApp": {
+        "customer" : {
+            "home": {
+                "title": "Customers",
+                "createLabel": "Skapa en ny Customer",
+                "createOrEditLabel": "Skapa eller ändra en Customer"
+            },
+            "created": "En ny Customer är skapad med id {{ param }}",
+            "updated": "En Customer är uppdaterad med id  {{ param }}",
+            "deleted": "En Customer är borttagen med id  {{ param }}",
+            "delete": {
+                "question": "Är du säker på att du vill ta bort Customer {{ id }}?"
+            },
+            "detail": {
+                "title": "Customer"
+            },
+            "name": "Name",
+            "preferredLanguage": "Preferred Language",
+            "active": "Active",
+            "loggingLevel": "Logging Level"
+        }
+    }
+}

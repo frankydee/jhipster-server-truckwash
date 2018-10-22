@@ -1,0 +1,9 @@
+{
+    "truckwashApp": {
+        "ProductOrServiceType" : {
+            "null": "",
+            "PRODUCT": "PRODUCT",
+            "SERVICE": "SERVICE"
+        }
+    }
+}

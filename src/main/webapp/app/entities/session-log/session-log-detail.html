@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span data-translate="truckwashApp.sessionLog.detail.title">Session Log</span> {{vm.sessionLog.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="truckwashApp.sessionLog.logType">Log Type</span></dt>
+        <dd>
+            <span data-translate="{{'truckwashApp.LogType.' + vm.sessionLog.logType}}">{{vm.sessionLog.logType}}</span>
+        </dd>
+        <dt><span data-translate="truckwashApp.sessionLog.createDate">Create Date</span></dt>
+        <dd>
+            <span>{{vm.sessionLog.createDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="truckwashApp.sessionLog.filePath">File Path</span></dt>
+        <dd>
+            <span>{{vm.sessionLog.filePath}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="session-log-detail.edit({id:vm.sessionLog.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

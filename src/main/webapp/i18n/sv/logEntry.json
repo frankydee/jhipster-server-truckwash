@@ -1,0 +1,22 @@
+{
+    "truckwashApp": {
+        "logEntry" : {
+            "home": {
+                "title": "Log Entries",
+                "createLabel": "Skapa en ny Log Entry",
+                "createOrEditLabel": "Skapa eller ändra en Log Entry"
+            },
+            "created": "En ny Log Entry är skapad med id {{ param }}",
+            "updated": "En Log Entry är uppdaterad med id  {{ param }}",
+            "deleted": "En Log Entry är borttagen med id  {{ param }}",
+            "delete": {
+                "question": "Är du säker på att du vill ta bort Log Entry {{ id }}?"
+            },
+            "detail": {
+                "title": "Log Entry"
+            },
+            "time": "Time",
+            "message": "Message"
+        }
+    }
+}

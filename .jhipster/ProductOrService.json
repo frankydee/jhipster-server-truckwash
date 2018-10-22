@@ -1,0 +1,66 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "shortDescription",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "longDescription",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "unitOfMeashre",
+            "fieldType": "UnitOfMeasure",
+            "fieldValues": "NUMBER,LITRE,MILLILITRE,HOUR,MINUTE"
+        },
+        {
+            "fieldName": "pricePerUnit",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "type",
+            "javadoc": "Is this a product or a service",
+            "fieldType": "ProductOrServiceType",
+            "fieldValues": "PRODUCT,SERVICE"
+        },
+        {
+            "fieldName": "maxDuration",
+            "javadoc": "Maximum duration of the service in minutes.\n\nThis applies to services sold as a \"package\"\ne.g.  30 min Truck Wash,\n15 min Car wash\n\nIf a service is sold by the minutes, this field is indicates\nwhen the user will timeout.",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "quantityInStock",
+            "javadoc": "This is denormalised from the Inventory table for convenience\nTODO:Should this be normalised here?",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "quantityMetering",
+            "javadoc": "Whether the Quantity in stock is being metered\n\nThis is applicable only for products.",
+            "fieldType": "ProductQuantityMetering",
+            "fieldValues": "INFINITE_QTY,QTY_NOT_METERED,MANUAL,AUTO"
+        },
+        {
+            "fieldName": "autoMeteringInterval",
+            "javadoc": "Interval in minutes of how often a product quantity being auto-metered should be logged\n(this applies especially where we have a product with a level meter)",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "lowLevelAlert",
+            "javadoc": "Quantity at which an alert will be issued",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "active",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20181021095758",
+    "javadoc": "The ProductOrService entity\nCan represent a product for sale (e.g. AdBlue)\nor a service (like \"Washing a truck for 30 min\")",
+    "entityTableName": "product_or_service",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

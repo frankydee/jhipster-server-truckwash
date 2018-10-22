@@ -1,0 +1,58 @@
+<div>
+    <h2 data-translate="truckwashApp.customerProductOrService.home.title">Customer Product Or Services</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="customer-product-or-service.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="truckwashApp.customerProductOrService.home.createLabel">
+                        Create new Customer Product Or Service
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="truckwashApp.customerProductOrService.percentDiscount">Percent Discount</span></th>
+                    <th><span data-translate="truckwashApp.customerProductOrService.overridingPricePerUnit">Overriding Price Per Unit</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="customerProductOrService in vm.customerProductOrServices track by customerProductOrService.id">
+                    <td><a ui-sref="customer-product-or-service-detail({id:customerProductOrService.id})">{{customerProductOrService.id}}</a></td>
+                    <td>{{customerProductOrService.percentDiscount}}</td>
+                    <td>{{customerProductOrService.overridingPricePerUnit}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="customer-product-or-service-detail({id:customerProductOrService.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="customer-product-or-service.edit({id:customerProductOrService.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="customer-product-or-service.delete({id:customerProductOrService.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
